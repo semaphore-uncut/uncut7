@@ -20,6 +20,9 @@ blocks:
           - echo $APP_ENV
           - echo "Docker build..."
           - echo "done"
+          - ruby -v
+          - sem-version ruby 2.3.7
+          - ruby -v
 
   - name: "Smoke tests"
     task:
