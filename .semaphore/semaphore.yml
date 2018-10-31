@@ -14,6 +14,7 @@ blocks:
       jobs:
       - name: Docker build
         commands:
+          - nproc
           - checkout
           - ls -1
           - echo $APP_ENV
@@ -25,6 +26,7 @@ blocks:
       jobs:
       - name: Smoke
         commands:
+          - nproc
           - checkout
           - echo "make smoke"
 
@@ -33,11 +35,13 @@ blocks:
       jobs:
       - name: RSpec
         commands:
+          - nproc
           - checkout
           - echo "make rspec"
 
       - name: Lint code
         commands:
+          - nproc
           - checkout
           - echo "make lint"
 
@@ -55,6 +59,8 @@ blocks:
       jobs:
       - name: Cucumber
         commands:
+          - nproc
+          - free -m
           - checkout
           - echo "make cucumber"
 
