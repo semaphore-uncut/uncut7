@@ -47,6 +47,7 @@ blocks:
 
       - name: Check security
         commands:
+          - nproc
           - checkout
           - echo "make security"
 
